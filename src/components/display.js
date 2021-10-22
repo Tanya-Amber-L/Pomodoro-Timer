@@ -8,14 +8,11 @@ const Display = ({seconds}) => {
     return (
         <div className={"timer-number"}>
             <Cyphers value={valueMin} />
-            <span>{":"}</span>
+            <span style={{opacity: seconds % 2 ? "0.3" : "1"}}>{":"}</span>
             <Cyphers value={valueSec} />
         </div>
     );
 };
-// padStart(targetLength, padString) ->
-// Length of the resulting string once the current str has been padded. If the value is less than str.length, then str is returned as-is.
-// + The string to pad the current str with
 Display.propTypes = {
     seconds: PropTypes.number.isRequired,
 };
