@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bulma";
-import Hello from "./components/hello";
+import Pomodoro from "./containers/pomodoro";
 
-ReactDOM.render(<Hello name={"Name"} />, document.querySelector("#app"));
+ReactDOM.render(<Pomodoro />, document.querySelector("#app"));
