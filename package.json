@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint --fix --cache src"
+    "lint": "npx eslint --fix --cache src",
+    "work": "parcel src/index.html",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,10 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/eslint-parser": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
     "@becode/eslint-config": "^0.12.1",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^8.0.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
@@ -43,5 +48,9 @@
     "lint-staged": "^11.2.3",
     "parcel": "^2.0.0",
     "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
