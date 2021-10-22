@@ -1,0 +1,4 @@
+import React from "react";
+import ReactDOM from "react";
+import Hello from "./components/hello";
+ReactDOM.render(<Hello />, document.getElementById("app"));
