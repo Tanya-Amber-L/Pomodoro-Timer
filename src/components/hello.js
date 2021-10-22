@@ -1,8 +1,8 @@
 import React from "react";
-const Hello = () => {
+const Hello = ({name}) => {
     return (
         <>
-            <p>{"Hello World"}</p>
+            <p>{`Hello ${name}`}</p>
         </>
     );
 };
