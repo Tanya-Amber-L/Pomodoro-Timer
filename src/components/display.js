@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 import Cyphers from "./cyphers";
 
 const Display = ({seconds}) => {
-    valueMin = Math.floor(seconds / 60);
-    valueSec = seconds % 60;
     return (
         <div className={"timer-number"}>
-            <Cyphers value={valueMin} />
+            <Cyphers value={Math.floor(seconds / 60)} />
             <span style={{opacity: seconds % 2 ? "0.3" : "1"}}>{":"}</span>
-            <Cyphers value={valueSec} />
+            <Cyphers value={seconds % 60} />
         </div>
     );
 };
