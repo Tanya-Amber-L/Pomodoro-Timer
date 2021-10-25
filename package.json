@@ -2,12 +2,11 @@
   "name": "pomodoro-timer",
   "version": "1.0.0",
   "description": "Pomodoro Timer with React",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint --fix --cache src",
-    "work": "parcel src/index.html",
-    "build": "parcel build"
+    "work": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -53,6 +52,7 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "use-interval": "^1.4.0"
