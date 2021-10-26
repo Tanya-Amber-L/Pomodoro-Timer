@@ -18,8 +18,12 @@ Differences:
 
 The project is given to our [BeCode](https://becode.org/) juniors during their Web Developer training.
 
-#### Installation
+## Installation
 
 -   `npm install`
 -   `npm run build`
 -   (Locally : `npm run work`)
+
+
+## Deploy
+[On Netlify](https://react-pom-timer.netlify.app/)
