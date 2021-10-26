@@ -6,7 +6,7 @@ import Toolbar from "../components/toolbar";
 import Modal from "../components/modal";
 import styled from "styled-components";
 
-const defaultSessionDuration = 3;
+const defaultSessionDuration = 1500;
 
 const Pomodoro = () => {
     const [showModal, setShowModal] = useState(false);
