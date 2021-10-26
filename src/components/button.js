@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const Button = ({label, title, disabled = false, onClick}) => {
     return (
-        <>
-            <button
-                type={"button"}
-                className={"button is-info is-medium is-fullwidth"}
-                title={title || label}
-                disabled={disabled}
-                onClick={onClick}>
-                {label}
-            </button>
-        </>
+        <StyledButton
+            type={"button"}
+            className={""}
+            title={title || label}
+            disabled={disabled}
+            onClick={onClick}>
+            {label}
+        </StyledButton>
     );
 };
 Button.propTypes = {
@@ -21,4 +20,17 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     onClick: PropTypes.func.isRequired,
 };
+
+const StyledButton = styled.button`
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    transition: 0.3s;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+`;
+
 export default Button;

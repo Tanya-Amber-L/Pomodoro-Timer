@@ -1,2 +1,3 @@
-# Pomodoro-Timer
-Pomodoro Timer with React
+# ⏱️ Pomodoro-Timer
+
+> Pomodoro Timer with React, using Hooks

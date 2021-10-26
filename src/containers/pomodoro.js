@@ -4,8 +4,9 @@ import {useTimer} from "../hooks/use-timer";
 import Display from "../components/display";
 import Toolbar from "../components/toolbar";
 import Modal from "../components/modal";
+import styled from "styled-components";
 
-const defaultSessionDuration = 1500;
+const defaultSessionDuration = 3;
 
 const Pomodoro = () => {
     const [showModal, setShowModal] = useState(false);
@@ -45,21 +46,26 @@ const Pomodoro = () => {
     }, [setSeconds]);
 
     return (
-        <div className={"columns is-mobile is-centered"}>
-            <div className={"column is-half"}>
-                <Display seconds={seconds} />
-                <Toolbar
-                    isRunning={isRunning}
-                    onMinus={handleMinus}
-                    onReset={handleReset}
-                    onPlay={handlePlay}
-                    onPlus={handlePlus}
-                />
-            </div>
+        <PomodoroContainer>
+            <Display seconds={seconds} />
+            <Toolbar
+                isRunning={isRunning}
+                onMinus={handleMinus}
+                onReset={handleReset}
+                onPlay={handlePlay}
+                onPlus={handlePlus}
+            />
             {showModal && (
                 <Modal onClose={handleCloseModal} onRestart={handleRestart} />
             )}
-        </div>
+        </PomodoroContainer>
     );
 };
+
+const PomodoroContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
 export default Pomodoro;
