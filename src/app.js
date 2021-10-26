@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Pomodoro from "./containers/pomodoro";
-import "bulma";
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
